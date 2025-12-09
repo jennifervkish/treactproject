@@ -221,7 +221,7 @@ button {
   color: #a0aec0;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.6;
+  letter-spacing: 0.6px;
   text-align: center;
 }
 
@@ -241,12 +241,14 @@ button {
 }
 
 .header__img--wrapper {
-  width: calc(100% - 40%);
   margin-top: 32px;
   display: flex;
   justify-content: center;
 }
 
+.header__description, .header__img--wrapper {
+  flex: 1;
+}
 
 /* Features Section */
 
@@ -301,47 +303,47 @@ button {
   color: #1a202c;
 }
 
-.feature__description {
-  font-size: 16px;
-  color: #4a5568;
-  line-height: 1.5;
-}
-
 .features__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 48px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-  .feature {
-    flex: 1 1 calc(33% - 32px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
   }
 
 .feature__img--wrapper {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 68px;
+  height: 68px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
 .feature__title {
   font-weight: 700;
   margin-bottom: 8px;
-  color: #1a202c;
+  color: #243e63;
 }
 
 .feature__description {
   font-size: 14px;
   color: #718096;
   line-height: 1.5;
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: center;
 }
-
 
 /* Media Queries */
 
@@ -375,10 +377,8 @@ button {
   }
 
   .features__list {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-    justify-content: center;
   }
 
   .feature {
@@ -444,6 +444,11 @@ button {
 
   .feature {
     flex: 1 1 100%;
+  }
+
+  .features__list {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }
 
