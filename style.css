@@ -25,6 +25,9 @@ img {
 }
 
 .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 96px 24px;
 }
 
@@ -361,6 +364,10 @@ button {
   position: relative;
 }
 
+#Quality .container {
+  padding-left: 40px;
+}
+
 .quality {
   display: flex;
   align-items: center;
@@ -374,19 +381,21 @@ button {
 .quality__row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-direction: row;
+  justify-content: space-between;
+  gap: 64px;
 }
 
 .quality__header {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   max-width: 520px;
+  gap: 16px;
   text-align: left;
 } 
 
 .quality__subtitle {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.1em;
   margin-bottom: 16px;
@@ -394,7 +403,7 @@ button {
 }
 
 .quality__title {
-  font-size: 36px;
+  font-size: 44px;
   line-height: 1.25;
   margin-bottom: 16px;
   color: #1a202c;
@@ -416,8 +425,8 @@ button {
 }
 
 .quality__img--wrapper {
-  flex: 1;
-  display: flex;
+  flex: 0 0 auto;
+  display: inline-block;
   justify-content: flex-start;
   margin-top: 0;
   position: relative;
@@ -427,7 +436,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: static;
   z-index: 1;
   border: 1px solid #e2e8f0;
   margin-top: 0px;
@@ -436,17 +445,16 @@ button {
 }
 
 .quality__grid {
-    transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1);
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    fill: rgb(100, 21, 255);
-    --tw-text-opacity: 1;
-    color: rgba(100, 21, 255, var(--tw-text-opacity));
-    z-index: 0;
-    display: block;
+  position:absolute;
+  bottom: -32px;
+  right: -32px;
+  width: 80px;
+  height: 80px;
+  fill: rgb(100, 21, 255);
+  --tw-text-opacity: 1;
+  color: rgba(100, 21, 255, var(--tw-text-opacity));
+  z-index: -1;
+  display: block;
 }
 
 .quality__btn {
@@ -588,8 +596,7 @@ button {
   }
   
   .quality__row {
-    flex-direction: column-reverse;
-    gap: 1.5rem;
+    flex-direction: column;
     text-align: center;
   }
 
@@ -598,12 +605,14 @@ button {
   }
 
   .quality__img--wrapper {
-    justify-content: center;
-    margin-top: 0;
-    margin-bottom: 24px;
+   order: 1;
+   max-width: 75%;
+   max-height: 75%;
   }
 
   .quality__header {
+    order: 2;
+    align-items: center;
     text-align: center;
   }
 
@@ -611,6 +620,16 @@ button {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 24px;
+}
+
+.quality__img {
+  max-width: 100%;
+  height: auto;
+}
+
+.quality__para {
+  text-align: center;
 }
 
 }
