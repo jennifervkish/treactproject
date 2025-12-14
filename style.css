@@ -260,6 +260,10 @@ button {
   padding: 80px 16px;
 }
 
+#features .container {
+  padding-bottom: 48px;
+}
+
 .features__row {
   display: flex;
   flex-direction: column;
@@ -366,6 +370,8 @@ button {
 
 #Quality .container {
   padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 48px;
 }
 
 .quality {
@@ -458,13 +464,14 @@ button {
 }
 
 .quality__btn {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  display: inline-block;
+  width: auto;
+  margin: 32px auto;
   padding: 12px 32px;
   background-color: #6415ff;
   color: white;
   border: none;
-  border-radius: 9999px;
+  border-radius: 500px;
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
