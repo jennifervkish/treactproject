@@ -59,6 +59,10 @@ button {
   width: calc(100% - 40%);
 }
 
+#get-started {
+  overflow: visible;
+}
+
 /* Navigation Section */
 
 .nav__container {
@@ -480,6 +484,102 @@ button {
 
 .quality__btn:hover {
   background-color: #4b0fcc;
+}
+
+/* Get Started Section */
+
+
+#get-started {
+  position: relative;
+}
+
+.get-started__header {
+  max-width: 600px;
+  margin-bottom: 64px;
+}
+
+.get-started__subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  display: block;
+  color: #6415ff;
+}
+
+.get-started__title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1a202c;
+}
+
+.get-started__row {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.get-started__img--wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 520px;
+}
+
+.get-started__img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.get-started__grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  fill: #6415ff;
+  z-index: 0;
+}
+
+.get-started__steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.get-started__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.get-started__number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #cbd5e0;
+  line-height: 1;
+}
+
+.get-started__para {
+  font-size: 16px;
+  color: #7c8ba1;
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.get-started__step-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.get-started__img--wrapper,
+.get-started__steps {
+  flex: 1;
 }
 
 
