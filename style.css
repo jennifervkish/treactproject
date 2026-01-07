@@ -475,11 +475,82 @@ display: block;
   background-color: #4b0fcc;
 }
 
+/* Steps Section */
 
+#steps {
+  padding: 96px 40px;
+}
 
-/* Get Started Section */
+.steps__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  flex-wrap: nowrap;
+}
 
+.steps__img--wrapper {
+flex: 0 0 50%;
+max-width: 520px;
+}
 
+.steps__img {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+}
+  
+.steps__text {
+  flex: 1;
+}
+
+.step__number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #cbd5e0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.steps__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.step__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.steps__subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.step__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.steps__title {
+  color: rgb(36, 62, 99);
+  font-size: 48px;
+  font-weight: 900;
+}
+  
 
 /* Media Queries */
 
@@ -639,6 +710,69 @@ display: block;
 
 }
 
+.steps__steps {
+    flex-direction: column;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px; 
+  }
+
+
+.step__number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #cbd5e0;
+  line-height: 1;
+  flex-shrink: 0; 
+}
+
+.step__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+}
+
+.step__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(36, 62, 99);
+}
+
+.step__description {
+  font-size: 16px;
+  color: #7c8ba1;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0;
+}
+
+.steps__row {
+    flex-direction: column; 
+    align-items: center;    
+    gap: 32px;              
+  }
+
+  .steps__img--wrapper, .steps__text {
+    flex: 1 1 100%;         
+    max-width: 100%;
+  }
+
+  .steps__text {
+    flex: 1 1 100%;         
+  }
+
+  .steps__subtitle {
+    text-align: center;
+  }
+
+  .steps__title {
+    text-align: center;
+    font-size: 30px;
+  }
 
 @media (min-width: 1025px) {
   .header__container {
