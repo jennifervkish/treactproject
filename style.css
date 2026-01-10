@@ -485,11 +485,16 @@ button {
   align-items: flex-start;
   gap: 64px;
   flex-wrap: nowrap;
+  position: relative;
 }
 
 .steps__img--wrapper {
   flex: 0 0 50%;
   max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .steps__img {
@@ -560,6 +565,18 @@ button {
   line-height: 1.6;
   max-width: 360px;
   margin: 0;
+}
+
+.steps__grid {
+  position: absolute;
+  left: 50%;
+  bottom: -88px;
+  fill: rgb(100, 21, 255);
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+  width: 96px;
+  height: 96px;
 }
 
 
