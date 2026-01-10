@@ -484,11 +484,10 @@ button {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 64px;
+  gap: 32px;
   flex-wrap: wrap;
   position: relative;
   height:auto;
-  background-color: rgba(37, 9, 121, 0.5)
 }
 
 .steps__img--wrapper {
@@ -508,6 +507,8 @@ button {
   max-width: 512px;
   display: block;
   z-index: 2;
+  padding: 0;
+  margin: 0;
 }
 
 .steps__text {
@@ -515,11 +516,12 @@ button {
 }
 
 .steps__subtitle {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.1em;
   margin-bottom: 16px;
   display: block;
+  margin-top: 64px;
 }
 
 .steps__title {
@@ -584,6 +586,7 @@ button {
   pointer-events: none;
   width: 96px;
   height: 96px;
+  margin-bottom: 24px;
 }
 
 /* Media Queries */
