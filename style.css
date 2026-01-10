@@ -29,6 +29,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
+  height: auto;
 }
 
 #features .container {
@@ -484,23 +485,29 @@ button {
   flex-direction: row;
   align-items: flex-start;
   gap: 64px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   position: relative;
+  height:auto;
+  background-color: rgba(37, 9, 121, 0.5)
 }
 
 .steps__img--wrapper {
   flex: 0 0 50%;
-  max-width: 520px;
+  width: 100%;
+  max-width: 448px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  height: auto;
+  
 }
 
 .steps__img {
   width: 100%;
-  max-width: 520px;
+  max-width: 512px;
   display: block;
+  z-index: 2;
 }
 
 .steps__text {
@@ -570,15 +577,14 @@ button {
 .steps__grid {
   position: absolute;
   left: 50%;
-  bottom: -88px;
+  bottom: 0; 
+  transform: translate(-50%, 50%)  rotate(180deg); 
   fill: rgb(100, 21, 255);
-  transform: translateX(-50%);
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
   width: 96px;
   height: 96px;
 }
-
 
 /* Media Queries */
 
