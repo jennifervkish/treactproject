@@ -473,36 +473,39 @@ button {
   padding: 96px 40px;
 }
 
+/* Row containing image + text */
 .steps__row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 32px;
-  flex-wrap: wrap;
-  position: relative;
-  height: auto;
+  flex-wrap: nowrap;
 }
 
+/* Image wrapper */
 .steps__img--wrapper {
-  width: 100%;
-  max-width: 448px;
+  position: relative;      /* Anchor for the grid SVG */
+  width: fit-content;      /* Shrink-wrap to image width */
+  max-width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* The laptop / main image */
+.steps__img {
+  width: auto;
   height: auto;
-  overflow: visible;
-  padding-bottom: 0;
+  max-width: 512px;        /* Desktop max width */
+  display: block;
+  object-fit: contain;
+  z-index: 1;
 }
 
-.steps__img--wrapper {
-  position: relative;
-  overflow: visible;
-}
-
+/* Decorative grid SVG under image */
 .steps__img--wrapper .steps__grid {
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: -48px;
   transform: translateX(-50%) rotate(180deg);
   width: 96px;
@@ -512,20 +515,15 @@ button {
   pointer-events: none;
 }
 
-.steps__img {
-  width: 100%;
-  max-width: 512px;
-  display: block;
-  z-index: 2;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
+/* Text content */
 .steps__text {
-  flex: 1 1 50%;
+  flex: 1 1 55%;
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Section subtitles and titles */
 .steps__subtitle {
   font-size: 16px;
   font-weight: 700;
@@ -542,6 +540,7 @@ button {
   margin-bottom: 32px;
 }
 
+/* Steps list */
 .steps__steps {
   display: flex;
   flex-direction: column;
@@ -587,17 +586,7 @@ button {
   margin: 0;
 }
 
-.steps__grid {
-  position: absolute;
-  bottom: -48px;
-  left: 50%;
-  transform: translateX(-50%) rotate(180deg);
-  width: 160px;
-  height: auto;
-  fill: rgba(100, 21, 255, 0.15);
-  z-index: 1;
-  pointer-events: none;
-}
+
 
 /* Media Queries */
 
@@ -684,27 +673,6 @@ button {
     max-width: 320px;
     margin: 16px auto;
     display: block;
-  }
-
-  .steps__img--wrapper {
-  left: 0;
-  bottom: -48px;
-  }
-
-  .steps__text {
-    flex: 1 1 52%;
-    max-width: 52%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .steps__title {
-    font-size: 30px;
-    margin-top: 8px;
-  }
-
-  .steps__subtitle {
-    text-align: left;
   }
 
   .header__customers {
@@ -806,68 +774,53 @@ button {
   .quality__para {
     text-align: center;
   }
-
+  
   .steps__row {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 16px;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
   }
 
   .steps__img--wrapper {
-    order: 0;
-    left: 0;
-    bottom: -48px;
-    margin: 0;
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
-    padding-bottom: 36px;
+    max-width: 100%;
+    margin: 24px auto;
   }
 
   .steps__img {
-    width: auto;
-    height: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
+    width: 100%;
+    max-width: 320px;  /* Limit image size on mobile */
+    height: auto;
     transform: translateY(8px);
   }
 
   .steps__text {
+    flex: 1 1 100%;
+    max-width: 100%;
     order: 1;
-    flex: 1 1 55%;
-    max-width: 55%;
-    display: flex;
-    flex-direction: column;
   }
 
   .steps__subtitle {
+    font-size: 12px;
     margin-top: 0;
     text-align: left;
-    font-size: 12px;
   }
 
   .steps__title {
-    text-align: left;
     font-size: 28px;
+    text-align: left;
   }
 
   .steps__steps {
-    flex-direction: column;
     gap: 24px;
   }
 
   .step {
-    display: flex;
-    align-items: flex-start;
     gap: 12px;
     text-align: left;
   }
 
   .step__number {
     font-size: 28px;
-    flex-shrink: 0;
   }
 
   .step__title {
@@ -878,12 +831,6 @@ button {
     font-size: 14px;
     max-width: 300px;
   }
-
-  .steps__grid {
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-  }
-
 }
 
 @media (max-width: 1024px) {
@@ -928,47 +875,6 @@ button {
     font-size: 16px;
   }
 
-  .steps__steps {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .step {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-  }
-
-  .step__number {
-    font-size: 36px;
-    font-weight: 700;
-    color: #cbd5e0;
-    line-height: 1;
-    flex-shrink: 0;
-    margin-bottom: 8px;
-  }
-
-  .step__text {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .step__title {
-    font-size: 20px;
-    font-weight: 600;
-    color: rgb(36, 62, 99);
-  }
-
-  .step__description {
-    font-size: 16px;
-    color: #7c8ba1;
-    line-height: 1.6;
-    max-width: 300px;
-    margin: 0;
-  }
-
   .steps__row {
     flex-direction: column;
     align-items: center;
@@ -981,12 +887,20 @@ button {
     max-width: 100%;
   }
 
-  .steps__subtitle {
-    text-align: center;
+  .steps__img {
+    max-width: 400px;
+  }
+
+  .steps__grid {
+    bottom: -32px;  /* Slight adjustment for smaller image */
   }
 
   .steps__title {
     font-size: 30px;
+    text-align: center;
+  }
+
+  .steps__subtitle {
     text-align: center;
   }
 
@@ -1045,7 +959,6 @@ button {
   }
 
   .steps__row {
-    display: flex;
     flex-direction: row;
     align-items: stretch;
     gap: 32px;
@@ -1053,31 +966,34 @@ button {
   }
 
   .steps__img--wrapper {
-    left: 0;
-    bottom: -48px;
-    display: flex;
-    align-items: stretch;
     justify-content: center;
-    margin: 0;
+    align-items: flex-start;
+    width: fit-content;      /* Ensure SVG is anchored */
+    max-width: 100%;
   }
 
   .steps__img {
-    width: auto;
-    height: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
+    max-width: 512px;
+    height: auto;
+    transform: none;
   }
+
   .steps__text {
-    order: 1;
     flex: 1 1 55%;
     max-width: 55%;
-    display: flex;
-    flex-direction: column;
   }
 
   .steps__grid {
-    transform: translateX(-50%) rotate(180deg);
+    bottom: -48px;
+  }
+
+  .steps__title {
+    font-size: 48px;
+    text-align: left;
+  }
+
+  .steps__subtitle {
+    text-align: left;
   }
 
   .header__customers--title {
