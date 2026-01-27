@@ -484,7 +484,6 @@ button {
 }
 
 .steps__img--wrapper {
-  flex: 0 0 50%;
   width: 100%;
   max-width: 448px;
   display: flex;
@@ -503,7 +502,8 @@ button {
 
 .steps__img--wrapper .steps__grid {
   position: absolute;
-  left: 50%;
+  left: 0;
+  bottom: -48px;
   transform: translateX(-50%) rotate(180deg);
   width: 96px;
   height: 96px;
@@ -687,8 +687,8 @@ button {
   }
 
   .steps__img--wrapper {
-    flex: 0 0 48%;
-    max-width: 48%;
+  left: 0;
+  bottom: -48px;
   }
 
   .steps__text {
@@ -816,8 +816,8 @@ button {
 
   .steps__img--wrapper {
     order: 0;
-    flex: 0 0 45%;
-    max-width: 45%;
+    left: 0;
+    bottom: -48px;
     margin: 0;
     display: flex;
     align-items: stretch;
@@ -1011,8 +1011,8 @@ button {
   }
   
   .steps__img--wrapper {
-    max-width: 50%;
-    flex: 0 0 50%;
+    left: 0;
+    bottom: -48px;
   }
 
   .steps__grid {
@@ -1053,8 +1053,8 @@ button {
   }
 
   .steps__img--wrapper {
-    flex: 0 0 45%;
-    max-width: 45%;
+    left: 0;
+    bottom: -48px;
     display: flex;
     align-items: stretch;
     justify-content: center;
