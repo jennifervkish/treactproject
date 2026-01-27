@@ -579,14 +579,11 @@ button {
 .steps__grid {
   position: absolute;
   left: 50%;
-  bottom: 0; 
   transform: translate(-50%, 50%)  rotate(180deg); 
   fill: rgb(100, 21, 255);
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
-  width: 96px;
-  height: 96px;
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 /* Media Queries */
