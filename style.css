@@ -645,6 +645,7 @@ button {
 .values__img {
   width: 100%;
   height: 100%;
+  max-width: 448px;
 }
 
 .values__img--wrapper {
@@ -703,7 +704,20 @@ button {
   color: #7c8ba1;
 }
 
-
+.values__btn {
+  display: inline-block;
+  width: auto;
+  margin: 32px auto;
+  padding: 12px 32px;
+  background-color: #6415ff;
+  color: white;
+  border: none;
+  border-radius: 500px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
 
 /* Media Queries */
