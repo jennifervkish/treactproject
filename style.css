@@ -473,7 +473,7 @@ button {
   padding: 96px 40px;
 }
 
-/* Row containing image + text */
+
 .steps__row {
   display: flex;
   flex-direction: row;
@@ -482,40 +482,27 @@ button {
   flex-wrap: nowrap;
 }
 
-/* Image wrapper */
+
 .steps__img--wrapper {
-  position: relative;      /* Anchor for the grid SVG */
-  width: fit-content;      /* Shrink-wrap to image width */
+  position: relative;     
+  width: fit-content;      
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-/* The laptop / main image */
+
 .steps__img {
   width: auto;
   height: auto;
-  max-width: 512px;        /* Desktop max width */
+  max-width: 512px;        
   display: block;
   object-fit: contain;
   z-index: 1;
 }
 
-/* Decorative grid SVG under image */
-.steps__img--wrapper .steps__grid {
-  position: absolute;
-  left: 50%;
-  bottom: -48px;
-  transform: translateX(-50%) rotate(180deg);
-  width: 96px;
-  height: 96px;
-  fill: rgba(100, 21, 255, 0.15);
-  z-index: 0;
-  pointer-events: none;
-}
 
-/* Text content */
 .steps__text {
   flex: 1 1 55%;
   max-width: 55%;
@@ -523,7 +510,7 @@ button {
   flex-direction: column;
 }
 
-/* Section subtitles and titles */
+
 .steps__subtitle {
   font-size: 16px;
   font-weight: 700;
@@ -585,6 +572,137 @@ button {
   max-width: 360px;
   margin: 0;
 }
+
+/* Values Section */
+#values {
+  background-color: #f7fafc;
+  padding: 80px 16px;
+}
+
+.values {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.values__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.values__header {
+  max-width: 600px;
+  margin: 0 auto 64px auto;
+  text-align: center;
+}
+
+.values__subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.values__title {
+  font-size: 36px;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: #1a202c;
+}
+
+.values__para {
+  font-size: 16px;
+  color: #718096;
+  line-height: 1.6;
+}
+
+.values__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 16px 0;
+  color: #1a202c;
+}
+
+.values__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.values__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  text-align: left;
+}
+
+.values__img {
+  width: 100%;
+  height: 100%;
+}
+
+.values__img--wrapper {
+  width: 68px;
+  height: 68px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.values__title {
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #243e63;
+}
+
+.values__description {
+  font-size: 14px;
+  color: #718096;
+  line-height: 1.5;
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.values__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+}
+
+.values__title,
+.values__description {
+  text-align: left;
+}
+
+
+.values__text {
+  flex: 1;
+}
+
+.values__title--affordable,
+.values__title--professionalism {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.values__description--affordable,
+.values__description--professionalism {
+  font-size: 14px;
+  color: #7c8ba1;
+}
+
 
 
 
@@ -788,7 +906,7 @@ button {
 
   .steps__img {
     width: 100%;
-    max-width: 320px;  /* Limit image size on mobile */
+    max-width: 320px; 
     height: auto;
     transform: translateY(8px);
   }
@@ -890,11 +1008,7 @@ button {
   .steps__img {
     max-width: 400px;
   }
-
-  .steps__grid {
-    bottom: -32px;  /* Slight adjustment for smaller image */
-  }
-
+ 
   .steps__title {
     font-size: 30px;
     text-align: center;
@@ -928,10 +1042,6 @@ button {
     left: 0;
     bottom: -48px;
   }
-
-  .steps__grid {
-    bottom: -16px;
-}
 }
 
 @media (min-width: 1025px) {
@@ -968,7 +1078,7 @@ button {
   .steps__img--wrapper {
     justify-content: center;
     align-items: flex-start;
-    width: fit-content;      /* Ensure SVG is anchored */
+    width: fit-content;      
     max-width: 100%;
   }
 
@@ -981,10 +1091,6 @@ button {
   .steps__text {
     flex: 1 1 55%;
     max-width: 55%;
-  }
-
-  .steps__grid {
-    bottom: -48px;
   }
 
   .steps__title {
@@ -1063,5 +1169,3 @@ button {
     gap: 36px;
   }
 }
-
-
