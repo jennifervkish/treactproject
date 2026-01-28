@@ -637,17 +637,16 @@ button {
 }
 
 .values__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 64px;
+ order: 2;
+text-align: center;
+align-items: center;
 }
 
 .values__row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 64px;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .values__header {
@@ -707,6 +706,7 @@ values__btn:hover {
 .values__image img {
   max-width: 100%;
   height: auto;
+  order: 1;
 }
 
 .values__list {
@@ -988,20 +988,22 @@ values__btn:hover {
   }
 
   .values__content {
+    order: 1;
     flex: 1;
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: flex-start; 
   }
 
   .values__image {
+    order: 2;
     flex: 1;
     display: flex;
+    justify-content: center;
   }
 
   .values__list {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 12px;
     margin-bottom: 16px;
@@ -1131,6 +1133,7 @@ values__btn:hover {
     order: -1;
     margin-bottom: 32px;
   }
+  
 }
 
 @media (min-width: 1025px) {
@@ -1224,6 +1227,31 @@ values__btn:hover {
 
   .quality__img--wrapper {
     margin-top: 0;
+  }
+
+  .values__row {
+    display: flex;
+    align-items: center;
+  }
+
+  .values__content {
+    order: 1;
+  }
+
+  .values__image {
+    order: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .values__list {
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .value__name {
+    flex: 1;
   }
 }
 
