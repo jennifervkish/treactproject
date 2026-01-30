@@ -569,7 +569,9 @@ button {
   margin: 0;
 }
 
-/* Values Section */
+/* ===============================
+   Values Section
+   =============================== */
 #values {
   background-color: white;
   padding: 80px 16px;
@@ -583,14 +585,6 @@ button {
   align-items: stretch;
   text-align: left;
   gap: 64px;
-}
-
-/* ===============================
-   Values Section
-   =============================== */
-#values {
-  background-color: white;
-  padding: 80px 16px;
 }
 
 /* Header */
@@ -738,6 +732,118 @@ button {
     gap: 24px;
   }
 }
+
+
+/* ===============================
+   Pricing Section
+   =============================== */
+
+#pricing {
+  padding: 96px 16px;
+  background-color: white;
+}
+
+.pricing__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Header */
+.pricing__header {
+  max-width: 600px;
+  margin: 0 auto 64px;
+}
+
+.pricing__subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.pricing__title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #243e63;
+  margin: 16px 0;
+}
+
+.pricing__para {
+  font-size: 16px;
+  color: #7c8ba1;
+  line-height: 1.625;
+}
+
+/* Cards */
+.pricing__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Individual Card */
+.pricing__card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing__card--featured {
+  background-color: #6415ff;
+  color: white;
+  transform: scale(1.05);
+}
+
+.plan__name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.plan__price {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 16px 0;
+}
+
+.plan__price span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.plan__description {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.plan__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing__btn {
+  padding: 12px 32px;
+  border-radius: 9999px;
+  border: none;
+  background-color: #6415ff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pricing__btn--featured {
+  background-color: white;
+  color: #6415ff;
+}
+
+
 /* Media Queries */
 
 @media (max-width: 768px) {
@@ -1152,6 +1258,12 @@ button {
     order: -1;
     margin-bottom: 32px;
   }
+
+  .value__name {
+    margin-left: 0;
+    margin-top: 0;
+    max-width: 100%;
+  }
   
 }
 
@@ -1347,5 +1459,21 @@ button {
   .values__btn {
     align-self: flex-start; 
     margin-top: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .values__list {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+   .pricing__cards {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .pricing__card {
+    flex: 1;
   }
 }
