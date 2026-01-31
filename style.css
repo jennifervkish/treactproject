@@ -757,14 +757,41 @@ button {
   align-items: stretch;
 }
 
+.pricing__card-top,
+.pricing__card-middle {
+  border-bottom: 1px solid #e5e7eb; 
+}
+
+.pricing__card-middle {
+  padding-top: 16px;
+}
+
+.pricing__card-bottom {
+  padding-top: 16px;
+}
+
+.pricing__card-top {
+  padding-bottom: 16px;
+  line-height: 1.625;
+}
+
+.pricing__card-top,
+.pricing__card-middle,
+.pricing__card-bottom {
+  padding: 24px 32px;
+}
+
 /* Individual Card */
 .pricing__card {
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 360px;
+  width: 100%;
 }
 
 /* Plan 1: Personal */
@@ -781,11 +808,36 @@ button {
   background-color:
 }
 
+.pricing__card--personal {
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing__card--personal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+
 .pricing__card--small-businesses {
-  background-color: #6415ff;
+  background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
   color: white;
   transform: scale(1.05);
 }
+.pricing__card--enterprise {
+  background: white
+  color: white;
+  transform: scale(1.05);
+}
+
 
 .plan__name {
   font-size: 20px;
@@ -834,6 +886,7 @@ button {
   background-color: white;
   color: #6415ff;
 }
+
 
 
 /* Media Queries */
