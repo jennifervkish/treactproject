@@ -752,11 +752,23 @@ button {
   gap: 32px;
   align-items: stretch;
   justify-items: center;
+  position: relative;
 }
 
 .pricing__card-top,
 .pricing__card-middle {
   border-bottom: 1px solid #e5e7eb; 
+}
+
+.pricing__card--personal .plan__freq,
+.pricing__card--enterprise .plan__freq {
+  color: #7c8ba1; 
+  font-weight: 600;
+}
+
+.pricing__card--personal .plan__features li,
+.pricing__card--enterprise .plan__features li {
+  color: #a0aec0; 
 }
 
 .pricing__card-middle {
@@ -775,20 +787,21 @@ button {
 .pricing__card-top,
 .pricing__card-middle,
 .pricing__card-bottom {
-  padding: 24px 32px;
+  padding: 40px 20px;
   position: relative;
   z-index: 1;
 }
 
-.pricing__blob {
+.plans__blob {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+  left: -40px;
+  bottom: -40px;
+  transform: translateX(-35%) translateY(35%);
   width: 256px;
   height: 256px;
-  z-index: -10;
-  opacity: 0.25;
+  z-index: 0;
+  opacity: .25;
+  pointer-events: none;
 }
 
 .pricing__card {
@@ -797,20 +810,29 @@ button {
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 360px;
   width: 100%;
   height: 100%;
+  z-index: 1;
+}
+
+.pricing__card--personal {
   position: relative;
   overflow: hidden;
+  border: 1px solid #e5e7eb;
 }
 
 .pricing__card--personal .pricing__btn {
-  background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
   color: white;
 }
-
 
 .pricing__card--personal {
   position: relative;
@@ -832,7 +854,9 @@ button {
 }
 
 .pricing__card--small-businesses {
-  background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+  background: linear-gradient(
+  135deg, rgb(76, 81, 191) 0%,
+  rgb(102, 126, 234) 100%);
   color: white;
 }
 
@@ -845,6 +869,11 @@ button {
   color: black;
   position: relative;
   overflow: hidden;
+}
+
+.pricing__card--personal,
+.pricing__card--enterprise {
+  background-color: white;
 }
 
 .pricing__card--enterprise .pricing__btn {
@@ -909,15 +938,18 @@ button {
 }
 
 .pricing__btn {
-  padding: 12px 32px;
+  padding: 16px 80px;
   border-radius: 9999px;
   border: none;
-  color: white;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
+  transition: all 300ms ease;
 }
 
-
+.pricing__btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
 /* Media Queries */
 
 @media (max-width: 768px) {
