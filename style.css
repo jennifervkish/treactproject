@@ -751,6 +751,7 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   align-items: stretch;
+  justify-items: center;
 }
 
 .pricing__card-top,
@@ -763,7 +764,7 @@ button {
 }
 
 .pricing__card-bottom {
-  padding-top: 32px;
+  flex: 1;
 }
 
 .pricing__card-top {
@@ -774,10 +775,22 @@ button {
 .pricing__card-top,
 .pricing__card-middle,
 .pricing__card-bottom {
-  padding: 20px 24px;
+  padding: 24px 32px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Individual Card */
+.pricing__blob {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-50%) translateY(50%) scaleX(1) scaleY(1);
+  width: 256px;
+  height: 256px;
+  z-index: -10;
+  opacity: 0.25;
+}
+
 .pricing__card {
   border-radius: 16px;
   padding: 32px 24px;
@@ -788,7 +801,11 @@ button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 360px;
   width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
+
 .pricing__card--personal .pricing__btn {
   background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
   color: white;
@@ -817,7 +834,6 @@ button {
 .pricing__card--small-businesses {
   background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
   color: white;
-  transform: scale(1.05);
 }
 
 .pricing__card--small-businesses .pricing__btn {
@@ -827,7 +843,6 @@ button {
 .pricing__card--enterprise {
   background: white;
   color: black;
-  transform: scale(1.05);
   position: relative;
   overflow: hidden;
 }
@@ -853,6 +868,11 @@ button {
     rgb(245, 101, 101) 0%,
     rgb(254, 178, 178) 100%
   );
+}
+
+.pricing__card--personal,
+.pricing__card--enterprise {
+  border: 1px solid #e5e7eb;
 }
 
 .plan__name {
@@ -1201,6 +1221,14 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .pricing__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing__card {
+    max-width: 100%;
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -1321,6 +1349,15 @@ button {
     margin-left: 0;
     margin-top: 0;
     max-width: 100%;
+  }
+
+  .pricing__cards {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .pricing__card--small-businesses {
+    transform: none;
   }
   
 }
