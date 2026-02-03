@@ -757,18 +757,18 @@ button {
 
 .pricing__card-top,
 .pricing__card-middle {
-  border-bottom: 1px solid #e5e7eb; 
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .pricing__card--personal .plan__freq,
 .pricing__card--enterprise .plan__freq {
-  color: #7c8ba1; 
+  color: #7c8ba1;
   font-weight: 600;
 }
 
 .pricing__card--personal .plan__features li,
 .pricing__card--enterprise .plan__features li {
-  color: #a0aec0; 
+  color: #a0aec0;
 }
 
 .pricing__card-middle {
@@ -800,7 +800,7 @@ button {
   width: 256px;
   height: 256px;
   z-index: 0;
-  opacity: .25;
+  opacity: 0.25;
   pointer-events: none;
 }
 
@@ -855,8 +855,10 @@ button {
 
 .pricing__card--small-businesses {
   background: linear-gradient(
-  135deg, rgb(76, 81, 191) 0%,
-  rgb(102, 126, 234) 100%);
+    135deg,
+    rgb(76, 81, 191) 0%,
+    rgb(102, 126, 234) 100%
+  );
   color: white;
 }
 
@@ -921,7 +923,7 @@ button {
 }
 
 .pricing__card-content {
-  flex: 1; 
+  flex: 1;
 }
 .plan__description {
   font-size: 16px;
@@ -1069,22 +1071,22 @@ button {
 }
 
 .testimonials__arrow {
-  background-color: #eee;      
+  background-color: #eee;
   border: none;
-  width: 48px;                  
+  width: 48px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   cursor: pointer;
-  margin-left: 44px;            
+  margin-left: 44px;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .testimonials__arrow:hover {
-  color: #4a0db1;         
-  background-color: #ddd; 
+  color: #4a0db1;
+  background-color: #ddd;
 }
 
 .testimonials__arrow svg {
@@ -1092,7 +1094,147 @@ button {
   height: 20px;
 }
 
-/* Media Queries */
+/* ===============================
+   Start Section
+   =============================== */
+
+#start {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 80px 0px;
+}
+
+.start__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgb(100, 21, 255);
+  border-radius: 8px;
+  max-width: 1000px;
+  min-height: auto;
+  width: 90%;
+  padding: 64px 32px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.start__blob {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.25;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.start__blob--1 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 20rem;
+  width: 20rem;
+  transform: translate(-5rem, 8rem);
+  color: rgb(80, 17, 204);
+  opacity: 0.5;
+}
+
+.start__blob--2 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 20rem;
+  width: 20rem;
+  transform: translate(5rem, -16rem);
+  color: rgb(80, 17, 204);
+  opacity: 0.5;
+}
+
+.start__text {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.start__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  max-width: 500px; 
+  z-index: 1;
+}
+
+.start__text {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+  z-index: 2;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.start__buttons {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.start__btn {
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Get Started button */
+.start__btn--primary {
+  background-color: #f56565;
+  color: white;
+  border: none;
+}
+
+.start__btn--primary:hover {
+  background-color: rgba(229, 62, 62);
+}
+
+/* Contact Us button */
+.start__btn--secondary {
+  background-color: rgb(100, 21, 255);
+  color: white;
+  border: 1px solid white;
+}
+
+.start__btn--secondary:hover {
+  background-color: #ddd;
+  color: #6415ff;
+}
+
+/* ===============================
+   Media Queries
+   =============================== */
+@media (max-width: 639px) {
+  .start__content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .start__buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .start__btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
 
 @media (max-width: 768px) {
   .nav-links {
@@ -1373,25 +1515,25 @@ button {
   }
 
   .values__btn {
-  align-self: center;
+    align-self: center;
   }
 
   .value__name {
-    align-items: center; 
+    align-items: center;
     text-align: center;
-}
+  }
 
-.values__title--wrapper {
+  .values__title--wrapper {
     justify-content: center;
-}
+  }
 
-.values__header {
-    text-align: center;      
-    max-width: 100%;         
+  .values__header {
+    text-align: center;
+    max-width: 100%;
     margin: 0 auto;
-}
+  }
 
-.pricing__cards {
+  .pricing__cards {
     grid-template-columns: 1fr;
   }
 
@@ -1402,7 +1544,6 @@ button {
   .pricing__card {
     max-width: 100%;
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -1533,7 +1674,7 @@ button {
   .pricing__card--small-businesses {
     transform: none;
   }
-  
+
   .testimonials__row {
     flex-direction: column;
     text-align: center;
@@ -1548,6 +1689,8 @@ button {
     gap: 24px;
   }
 
+  .start__container {
+    padding: 64px 24px;
 }
 
 @media (min-width: 1025px) {
@@ -1658,6 +1801,38 @@ button {
     flex: 1;
   }
 
+  .start__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 64px;
+    width: 100%;
+    max-width: calc(100% - 128px);
+    min-height: auto;
+    text-align: left;
+  }
+
+  .start__content {
+    flex-direction: row;
+    gap: 48px;
+    align-items: center;
+    max-width: 70%;
+  }
+
+  .start__text {
+    flex: 1;
+    font-size: 36px;
+  }
+
+  .start__buttons {
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+  }
+
+  .start__btn {
+    width: auto;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -1701,8 +1876,8 @@ button {
 
 @media (min-width: 769px) {
   .values__row {
-    flex-direction: row; 
-    align-items: center; 
+    flex-direction: row;
+    align-items: center;
     gap: 64px;
     width: 100%;
   }
@@ -1717,13 +1892,13 @@ button {
   }
 
   .values__image {
-    order: 2; 
+    order: 2;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     flex: 0 0 auto;
     max-width: 50%;
-    }
+  }
 
   .values__list {
     flex-direction: row;
@@ -1736,11 +1911,11 @@ button {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    align-items: center; 
+    align-items: center;
   }
 
   .values__btn {
-    align-self: flex-start; 
+    align-self: flex-start;
     margin-top: 32px;
   }
 }
@@ -1751,12 +1926,90 @@ button {
     width: 100%;
   }
 
-   .pricing__cards {
+  .pricing__cards {
     flex-direction: row;
     align-items: stretch;
   }
 
   .pricing__card {
     flex: 1;
+  }
+
+  .start__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 64px;
+  }
+
+  .start__content {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+    max-width: 70%;
+    text-align: left;
+  }
+
+  .start__buttons {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .start__title {
+    font-size: 36px;
+  }
+
+  .start__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 64px;
+    min-height: unset;
+  }
+
+  .start__content {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .start__title {
+    font-size: 36px;
+  }
+
+  .start__buttons {
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+  }
+
+  .start__btn {
+    width: auto;
+  }
+
+}
+
+@media {
+  .start__title {
+    font-size: 24px;
+  }
+
+  .start__buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .start__btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .start__container {
+    padding: 120px 48px;
+    min-height: 500px;
+  }
+  .start__content {
+    max-width: 600px;
   }
 }
