@@ -748,11 +748,9 @@ button {
 /* Cards */
 .pricing__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 360px);
   gap: 32px;
-  align-items: stretch;
-  justify-items: center;
-  position: relative;
+  justify-content: center;
 }
 
 .pricing__card-top,
@@ -773,10 +771,6 @@ button {
 
 .pricing__card-middle {
   padding-top: 16px;
-}
-
-.pricing__card-bottom {
-  flex: 1;
 }
 
 .pricing__card-top {
@@ -813,10 +807,9 @@ button {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  width: 360px;      
   max-width: 360px;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
 }
 
 .pricing__card--personal {
@@ -922,9 +915,6 @@ button {
   font-weight: 500;
 }
 
-.pricing__card-content {
-  flex: 1;
-}
 .plan__description {
   font-size: 16px;
   margin-bottom: 24px;
@@ -1221,7 +1211,7 @@ button {
 /* ===============================
    Media Queries
    =============================== */
-@media (max-width: 639px) {
+@media (max-width: 640px) {
   .start__content {
     max-width: 100%;
     text-align: center;
@@ -1234,6 +1224,7 @@ button {
     width: 100%;
     max-width: 300px;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -1533,16 +1524,9 @@ button {
     margin: 0 auto;
   }
 
-  .pricing__cards {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing__cards {
-    grid-template-columns: 1fr;
-  }
-
   .pricing__card {
-    max-width: 100%;
+    width: 100%;
+    max-width: 360px;
   }
 }
 
@@ -1666,15 +1650,22 @@ button {
     max-width: 100%;
   }
 
-  .pricing__cards {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
   .pricing__card--small-businesses {
     transform: none;
   }
 
+  .pricing__card {
+    max-width: 360px;
+    width: 100%;
+  }
+
+  .pricing__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    justify-items: center;
+  }
+  
   .testimonials__row {
     flex-direction: column;
     text-align: center;
@@ -1691,6 +1682,8 @@ button {
 
   .start__container {
     padding: 64px 24px;
+}
+
 }
 
 @media (min-width: 1025px) {
@@ -1833,6 +1826,14 @@ button {
   .start__btn {
     width: auto;
   }
+
+.pricing__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    gap: 32px;
+    justify-content: center;
+  }
+
 }
 
 @media (max-width: 1280px) {
@@ -1926,15 +1927,6 @@ button {
     width: 100%;
   }
 
-  .pricing__cards {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .pricing__card {
-    flex: 1;
-  }
-
   .start__container {
     flex-direction: row;
     justify-content: space-between;
@@ -1987,9 +1979,6 @@ button {
     width: auto;
   }
 
-}
-
-@media {
   .start__title {
     font-size: 24px;
   }
@@ -2004,6 +1993,7 @@ button {
     max-width: 300px;
   }
 }
+
 @media (min-width: 640px) and (max-width: 1024px) {
   .start__container {
     padding: 120px 48px;
