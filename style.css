@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
 
-/* Global Styles */
+/* ===============================
+   Global Styles
+   =============================== */
 
 * {
   margin: 0;
@@ -68,7 +70,9 @@ button {
   width: calc(100% - 40%);
 }
 
-/* Navigation Section */
+/* ===============================
+   Navigation Section
+   =============================== */
 
 .nav__container {
   width: 100%;
@@ -156,10 +160,10 @@ button {
 
 .header__container {
   width: 100%;
-  max-width: 1200px; /* increased for desktop */
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; /* stacked by default for mobile */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0 16px;
@@ -169,7 +173,7 @@ button {
 .header__description {
   display: flex;
   flex-direction: column;
-  align-items: center; /* center on mobile */
+  align-items: center;
   text-align: center;
   gap: 16px;
   padding: 60px 0;
@@ -183,13 +187,14 @@ button {
 
 .header__email--input {
   width: 100%;
-  padding: 16px 150px 16px 20px;
+  padding: 16px 150px 16px 20px; 
   border-radius: 9999px;
   border: 1px solid #e5e7eb;
   font-size: 16px;
   font-weight: 500;
   outline: none;
   text-align: left;
+  transition: border-color 300ms ease;
 }
 
 .header__email--btn {
@@ -242,8 +247,9 @@ button {
   height: auto;
 }
 
-
-/* Features Section */
+/* ===============================
+   Features Section
+   =============================== */
 
 #features {
   background-color: white;
@@ -337,7 +343,7 @@ button {
   font-size: 14px;
   color: #718096;
   line-height: 1.5;
-  max-width: 260px;
+  max-width: 200px;
   margin: 0 auto;
   text-align: center;
 }
@@ -551,7 +557,6 @@ button {
   max-width: 360px;
   margin: 0;
 }
-
 
 /* ===============================
    Values Section
@@ -1218,6 +1223,33 @@ button {
     width: 100%;
     max-width: 300px;
   }
+
+  .features__list {
+    grid-template-columns: 1fr;
+    gap: 32px; 
+  }
+
+  .feature {
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+    gap: 16px; 
+    text-align: left; 
+  }
+
+  .feature__img--wrapper {
+    flex-shrink: 0; 
+    margin-bottom: 0; 
+  }
+
+  .feature__text {
+    max-width: 220px; 
+  }
+
+  .feature__description {
+    line-height: 1.5;
+  }
+
 }
 
 /* Small tablets / large phones */
@@ -1242,11 +1274,39 @@ button {
     padding: 12px 0;
   }
 
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header__email--input {
+    position: static;
+    width: 100%;
+    padding-right: 20px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    text-align: left; 
+  }
+
+  .header__email--btn {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 9999px;
+    padding: 16px 0;
+    margin-top: 12px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
   .header__email--input,
   .header__email--btn {
     position: static;
     width: 100%;
-    padding: 16px 0;
+    padding: 16px 20px;
     margin-top: 12px;
     margin-bottom: 16px;
     line-height: 1.5;
@@ -1255,10 +1315,10 @@ button {
   .header__container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     padding: 0 16px;
-    text-align: center; 
+    text-align: center;
   }
 
   .header__customers--title {
@@ -1450,7 +1510,6 @@ button {
 
 /* Tablets */
 @media (min-width: 641px) and (max-width: 1024px) {
-
   .header__container {
     flex-direction: column;
     align-items: center;
@@ -1477,6 +1536,28 @@ button {
 
   .header__customers {
     max-width: 70%;
+  }
+
+  .features__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .feature {
+    flex-direction: row; 
+    align-items: flex-start; 
+    text-align: left; 
+    gap: 16px; 
+  }
+
+  .feature__text {
+    max-width: 100%;
+  }
+
+  .feature__description {
+    margin: 12px 0 0;
   }
 
   .start__container {
@@ -1567,7 +1648,7 @@ button {
 
 /* Desktops */
 @media (min-width: 1025px) {
-   .header__container {
+  .header__container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -1597,7 +1678,7 @@ button {
   .header__customers {
     max-width: 80%;
   }
-  
+
   .steps__row {
     flex-direction: row;
     align-items: stretch;
