@@ -187,7 +187,7 @@ button {
 
 .header__email--input {
   width: 100%;
-  padding: 16px 150px 16px 20px; 
+  padding: 16px 150px 16px 20px;
   border-radius: 9999px;
   border: 1px solid #e5e7eb;
   font-size: 16px;
@@ -371,6 +371,21 @@ button {
   padding-top: 48px;
 }
 
+#Quality .quality__header .quality__btn {
+  display: inline-block;
+  width: auto;
+  max-width: 180px;
+  padding: 12px 20px;
+  margin: 32px 0 0;
+  align-self: flex-start;
+}
+
+#Quality .quality__header .quality__para {
+  text-align: left;
+  margin: 0;
+  max-width: none;
+}
+
 .quality {
   display: flex;
   align-items: center;
@@ -395,6 +410,7 @@ button {
   max-width: 520px;
   gap: 16px;
   text-align: left;
+  align-items: flex-start;
 }
 
 .quality__subtitle {
@@ -410,13 +426,16 @@ button {
   font-weight: 500;
   color: #7c8ba1;
   line-height: 1.625;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .quality__title {
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 900;
   margin: 16px 0;
-  color: #1a202c;
+  color: rgb(36, 62, 99);
   line-height: 1.25;
 }
 
@@ -433,12 +452,13 @@ button {
   position: relative;
   z-index: 1;
   border: 1px solid #e2e8f0;
+  order: 2;
 }
 
 .quality__grid {
   position: absolute;
-  bottom: -32px;
-  right: -32px;
+  bottom: -40px;
+  right: -4px;
   width: 80px;
   height: 80px;
   fill: rgb(100, 21, 255);
@@ -446,10 +466,13 @@ button {
 }
 
 .quality__btn {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
   width: auto;
-  margin: 32px auto;
-  padding: 12px 32px;
+  max-width: 180px;
+  margin-top: 32px;
+  align-self: flex-start;
+  padding: 12px 20px;
   background-color: #6415ff;
   color: white;
   border: none;
@@ -561,7 +584,7 @@ button {
 /* ===============================
    Values Section
    =============================== */
-#values {
+#Values {
   background-color: white;
   padding: 80px 16px;
 }
@@ -701,6 +724,7 @@ button {
 #pricing {
   padding: 96px 16px;
   background-color: white;
+  overflow-x: hidden;
 }
 
 .pricing__container {
@@ -1226,30 +1250,29 @@ button {
 
   .features__list {
     grid-template-columns: 1fr;
-    gap: 32px; 
+    gap: 32px;
   }
 
   .feature {
-    flex-direction: row; 
-    align-items: center; 
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    gap: 16px; 
-    text-align: left; 
+    gap: 16px;
+    text-align: left;
   }
 
   .feature__img--wrapper {
-    flex-shrink: 0; 
-    margin-bottom: 0; 
+    flex-shrink: 0;
+    margin-bottom: 0;
   }
 
   .feature__text {
-    max-width: 220px; 
+    max-width: 220px;
   }
 
   .feature__description {
     line-height: 1.5;
   }
-
 }
 
 /* Small tablets / large phones */
@@ -1287,7 +1310,7 @@ button {
     margin-top: 12px;
     margin-bottom: 16px;
     line-height: 1.5;
-    text-align: left; 
+    text-align: left;
   }
 
   .header__email--btn {
@@ -1351,6 +1374,22 @@ button {
     max-width: none;
   }
 
+  #Quality .quality__header .quality__btn {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+  }
+
+  #Quality .quality__header .quality__para {
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #Quality .quality__img--wrapper {
+    margin-bottom: 24px;
+  }
+
   .quality__row,
   .quality {
     flex-direction: column;
@@ -1360,11 +1399,14 @@ button {
   }
 
   .quality__header {
-    max-width: 100%;
+    order: 2;
+    align-items: center;
+    text-align: center;
+    max-width: 420px;
   }
 
   .quality__img--wrapper {
-    max-width: 75%;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -1385,13 +1427,16 @@ button {
   .quality__btn {
     width: 100%;
     max-width: 320px;
-    margin: 16px auto 24px;
+    margin-top: 24px;
+    align-self: center;
     display: block;
   }
 
   .quality__para {
     text-align: center;
     font-size: 14px;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   #steps {
@@ -1502,9 +1547,31 @@ button {
     max-width: 100%;
   }
 
+  .pricing__cards {
+    grid-template-columns: 1fr;
+  }
+
   .pricing__card {
     width: 100%;
     max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .testimonials__row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonials__user {
+    justify-content: center;
+  }
+
+  .testimonials__arrows {
+    justify-content: center;
+  }
+
+  .testimonials__arrow {
+    margin-left: 0;
   }
 }
 
@@ -1546,10 +1613,10 @@ button {
   }
 
   .feature {
-    flex-direction: row; 
-    align-items: flex-start; 
-    text-align: left; 
-    gap: 16px; 
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 16px;
   }
 
   .feature__text {
@@ -1560,7 +1627,7 @@ button {
     margin: 12px 0 0;
   }
 
-  .start__container {
+  #start .container {
     padding: 120px 48px;
     min-height: 500px;
   }
@@ -1595,6 +1662,7 @@ button {
 
   .steps__subtitle {
     text-align: left;
+    font-size: 16px;
   }
 
   .steps__steps {
@@ -1644,6 +1712,31 @@ button {
     gap: 12px;
     align-items: center;
   }
+
+  .pricing__cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  #start .container {
+  padding: 16px 12px;      
+  max-width: 720px;        
+  margin: 0 auto;
+  align-items: center;
+}
+
+.start__content {
+  gap: 20px;               
+}
+
+.start__text {
+  margin-bottom: 0;
+  line-height: 1.35;
+}
+
+.start__buttons {
+  gap: 16px;
+}
 }
 
 /* Desktops */
@@ -1710,8 +1803,7 @@ button {
     align-items: flex-start;
   }
 
-  .steps__title,
-  .steps__subtitle {
+  .steps__title {
     text-align: left;
     font-size: 48px;
   }
@@ -1721,17 +1813,39 @@ button {
     width: 100%;
   }
 
-  .start__container {
+  #start .container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 120px 64px;
+    padding: 40px 64px;
   }
 
-  .start__content {
-    max-width: 70%;
+  #start .row {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+   .start__content {
+    width: 100%;
+    max-width: none;
+    flex-direction: row;     
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .start__text {
+    max-width: 520px;
+    margin: 0;
     text-align: left;
   }
+
+  .start__buttons {
+    justify-content: flex-end;
+    margin: 0;
+  }
+  
 }
 
 /* Large screens */
@@ -1774,5 +1888,11 @@ button {
 
   .features__list {
     gap: 36px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__container {
+    padding-top: 32px;
   }
 }
